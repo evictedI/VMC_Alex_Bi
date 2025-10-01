@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Alex Html</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <nav>
+      <div class="logo">
+        <div class="mark">A</div>
+        <span>Alex Html Traum</span>
+      </div>
+      <div class="nav-links">
+        <a href="#pricing">Projekte</a>
+        <a href="#about">Über mich</a>
+        <a href="#contact" class="btn-solid">Kontakt</a>
+      </div>
+    </nav>
+
+    <main class="hero">
+      <section class="hero-left">
+        <h1>Das ist die Html seite von <span style="background:linear-gradient(90deg,var(--pink),var(--purple));-webkit-background-clip:text;background-clip:text;color:transparent;">Alex</span></h1>
+        <p>Hallo ich bin alex und voll cool jo</p>
+
+        <div class="cards">
+          <div class="card">
+            <div class="kpi">Hobbys</div>
+            <div class="muted">ich mag programmieren </div>
+          </div>
+          <div class="card">
+            <div class="kpi">Hier gibt es farben und boxen</div>
+            <div class="muted">und coole andre sachen!</div>
+          </div>
+          <div class="card">
+            <div class="kpi">Hi</div>
+            <div class="muted">Hi</div>
+          </div>
+          <div class="card">
+            <div class="kpi">Anpassbar</div>
+            <div class="muted">ich bin anpassbar</div>
+          </div>
+        </div>
+
+        <div style="margin-top:1rem;display:flex;gap:0.6rem;align-items:center">
+          <button class="btn-solid">Click mich!</button>
+          <a href="#about" style="padding:0.55rem 0.9rem;border-radius:10px;background:transparent;border:1px solid rgba(255,255,255,0.06);text-decoration:none;color:inherit;font-weight:600">Mehr erfahren</a>
+        </div>
+      </section>
+
+      <aside class="panel glow">
+        <div style="display:flex;gap:0.9rem;align-items:center">
+          <div class="avatar">PL</div>
+          <div>
+            <h3>Willkommen</h3>
+            <div class="small">Schön, dass du hier bist — passe diese Seite an deine Bedürfnisse an.</div>
+          </div>
+        </div>
+
+        <div style="margin-top:1rem">
+          <strong>Quick Links</strong>
+          <ul style="margin:0.5rem 0 0 1rem;padding:0;list-style:disc;color:rgba(255,255,255,0.9)">
+            <li><a href="#" style="color:inherit;text-decoration:none;opacity:0.95">Vorlage herunterladen</a></li>
+            <li><a href="#" style="color:inherit;text-decoration:none;opacity:0.95">Anpassen</a></li>
+          </ul>
+        </div>
+
+      </aside>
+    </main>
+
+    <footer>
+      <div>© <span id="year"></span> Evicted• Made with ♥</div>
+      <div style="opacity:0.85">hier ist ein footer</div>
+    </footer>
+  </div>
+
+  <script>
+    const yearElem = document.getElementById('year');
+    if (yearElem) {
+      yearElem.textContent = new Date().getFullYear();
+    }
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      if (a.getAttribute('href') === '#') return;
+      a.addEventListener('click', e=>{
+        e.preventDefault();
+        if (!id) {
+          window.scrollTo({top:0, behavior:'smooth'});
+          return;
+        }
+        const el = document.getElementById(id);
+        if(el) el.scrollIntoView({behavior:'smooth', block:'start'});
+      })
+    })
+  </script>
+</body>
+</html>
