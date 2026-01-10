@@ -1,41 +1,120 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">  
-<title>Über mich</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Über mich - Alexander Biegel</title>
 <link rel="stylesheet" href="./stylesheet.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-    <h1>Über mich</h1>
-    <div class ="Infos">
-    <ul>
-        <li><h2>Infos</h2></li>
-        <li>Name: Alexander Biegel</li>
-        <li>Alter: 20</li>
-        <li>Geburtstag: 13.02.2005</li>
-        <li>Wohnort: Mautern an der Donau</li>
-        <li>Hobbys: gaming, programmieren</li>
-        <li>Lieblingsessen: Pizza</li>
-        <li>Haustier: 1 Kater namens Karlo</li>
-        <li>Lieblingsfarbe: Rosa</li>
-        <li>Lieblingsgetränk: Sprite</li>
-        <li>Lieblingsmusik: Rap</li>    
-        <li>Lieblingsserie: Dexter</li>
-        <li>Lieblingsfilm: Pulp Fiction</li>
+    <header class="hero-section">
+        <div class="hero-content">
+            <div class="profile-image">
+                <i class="fas fa-user-circle"></i>
+            </div>
+            <div class="hero-text">
+                <h1>Alexander Biegel</h1>
+                <p class="subtitle">20 Jahre alt • Student</p>
+                <p class="location"><i class="fas fa-map-marker-alt"></i> Mautern an der Donau</p>
+            </div>
+        </div>
+    </header>
 
-    </ul>
-    </div>
-    <div class ="SchulischeInfos">
-    <ul>
-        <li><h3>Schulische Infos</h3></li>
-        <li>Klasse: 3AAIF</li>
-        <li>Lieblingsfach: POS</li>
-        <li>Hassfach: Deutsch</li>
-        <li>ehemalige Schule: BORG krems</li>
-    </ul>
-    </div>
+    <main class="main-content">
+        <div class="container">
+            <div class="info-grid">
+                <div class="info-card personal-info">
+                    <div class="card-header">
+                        <i class="fas fa-user"></i>
+                        <h2>Persönliche Infos</h2>
+                    </div>
+                    <div class="card-content">
+                        <div class="info-item">
+                            <span class="label">Geburtstag:</span>
+                            <span class="value">13. Februar 2005</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="label">Hobbys:</span>
+                            <span class="value">Gaming, Programmieren</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="label">Lieblingsessen:</span>
+                            <span class="value">Pizza</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="label">Haustier:</span>
+                            <span class="value">Kater namens Karlo</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="label">Lieblingsfarbe:</span>
+                            <span class="value">Rosa</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="label">Lieblingsgetränk:</span>
+                            <span class="value">Sprite</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="label">Lieblingsmusik:</span>
+                            <span class="value">Rap</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="label">Lieblingsserie:</span>
+                            <span class="value">Dexter</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="label">Lieblingsfilm:</span>
+                            <span class="value">Pulp Fiction</span>
+                        </div>
+                    </div>
+                </div>
 
+                <div class="info-card school-info">
+                    <div class="card-header">
+                        <i class="fas fa-graduation-cap"></i>
+                        <h2>Schulische Infos</h2>
+                    </div>
+                    <div class="card-content">
+                        <div class="info-item">
+                            <span class="label">Klasse:</span>
+                            <span class="value">3AAIF</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="label">Lieblingsfach:</span>
+                            <span class="value">POS</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="label">Hassfach:</span>
+                            <span class="value">Deutsch</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="label">Ehemalige Schule:</span>
+                            <span class="value">BORG Krems</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-card interests">
+                    <div class="card-header">
+                        <i class="fas fa-heart"></i>
+                        <h2>Interessen</h2>
+                    </div>
+                    <div class="card-content">
+                        <div class="interest-tags">
+                            <span class="tag"><i class="fas fa-gamepad"></i> Gaming</span>
+                            <span class="tag"><i class="fas fa-code"></i> Programmieren</span>
+                            <span class="tag"><i class="fas fa-music"></i> Rap</span>
+                            <span class="tag"><i class="fas fa-film"></i> Filme & Serien</span>
+                            <span class="tag"><i class="fas fa-cat"></i> Katzen</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 Alexander Biegel</p>
+    </footer>
 </body>
-
 </html>

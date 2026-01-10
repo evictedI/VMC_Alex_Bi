@@ -7,14 +7,220 @@
     <title>Test</title>
 </head>
 <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
     <header class="bg-primary text-white text-center py-4">
         <h1>Welcome to My Website</h1>
         <p class="lead">A simple website using Bootstrap</p>
     </header>
     <main class="container my-5">
-        <h2>About</h2>
-        <p>This is a simple example of a website built with HTML and styled using Bootstrap.</p>
-        <p>Bootstrap makes it easy to create responsive and visually appealing designs.</p>
+        <!-- Grid System Showcase -->
+        <section class="mb-5">
+            <h2 class="mb-4">Bootstrap Grid System</h2>
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h3 class="card-title">Responsive Columns</h3>
+                            <p class="card-text">This card uses Bootstrap's grid system. On medium screens and up, it takes 4 columns out of 12.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h4 class="card-title">Flexible Layout</h4>
+                            <p class="card-text">Bootstrap's grid automatically adjusts for different screen sizes, making your site mobile-friendly.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Easy to Use</h5>
+                            <p class="card-text">Just add classes like col-md-4 to create responsive layouts without complex CSS.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Buttons and Alerts -->
+        <section class="mb-5">
+            <h2 class="mb-4">Buttons & Alerts</h2>
+            <div class="mb-3">
+                <button type="button" class="btn btn-primary me-2">Primary Button</button>
+                <button type="button" class="btn btn-secondary me-2">Secondary</button>
+                <button type="button" class="btn btn-success me-2">Success</button>
+                <button type="button" class="btn btn-danger me-2">Danger</button>
+                <button type="button" class="btn btn-warning me-2">Warning</button>
+                <button type="button" class="btn btn-info me-2">Info</button>
+                <button type="button" class="btn btn-light me-2">Light</button>
+                <button type="button" class="btn btn-dark">Dark</button>
+            </div>
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <strong>Success!</strong> This is a dismissible success alert.
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            <div class="alert alert-info" role="alert">
+                <strong>Info:</strong> Bootstrap provides many utility classes for quick styling.
+            </div>
+        </section>
+
+        <!-- Carousel -->
+        <section class="mb-5">
+            <h2 class="mb-4">Image Carousel</h2>
+            <div id="bootstrapCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#bootstrapCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#bootstrapCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#bootstrapCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="d-block w-100 bg-primary text-white text-center py-5">
+                            <h3>Slide 1</h3>
+                            <p>Bootstrap makes carousels easy to implement</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="d-block w-100 bg-success text-white text-center py-5">
+                            <h3>Slide 2</h3>
+                            <p>Responsive and customizable</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="d-block w-100 bg-info text-white text-center py-5">
+                            <h3>Slide 3</h3>
+                            <p>Perfect for showcasing content</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#bootstrapCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#bootstrapCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Accordion -->
+        <section class="mb-5">
+            <h2 class="mb-4">Accordion Component</h2>
+            <div class="accordion" id="bootstrapAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            What is Bootstrap?
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#bootstrapAccordion">
+                        <div class="accordion-body">
+                            Bootstrap is a powerful front-end framework for developing responsive and mobile-first websites.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Why use Bootstrap?
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#bootstrapAccordion">
+                        <div class="accordion-body">
+                            Bootstrap provides pre-built components, responsive grid system, and extensive documentation, saving development time.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Bootstrap Features
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#bootstrapAccordion">
+                        <div class="accordion-body">
+                            Includes components like navbars, modals, carousels, forms, buttons, and many utility classes for spacing, colors, and more.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modal Trigger -->
+        <section class="mb-5">
+            <h2 class="mb-4">Modal Dialog</h2>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Launch Demo Modal
+            </button>
+        </section>
+
+        <!-- Contact Form -->
+        <section class="mb-5">
+            <h2 class="mb-4">Contact Form</h2>
+            <form>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="firstName" class="form-label">First Name</label>
+                        <input type="text" class="form-control" id="firstName" placeholder="Enter your first name">
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="lastName" class="form-label">Last Name</label>
+                        <input type="text" class="form-control" id="lastName" placeholder="Enter your last name">
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email Address</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea class="form-control" id="message" rows="4" placeholder="Enter your message"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+        </section>
     </main>
-</body>
-</html>
+
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+        <div class="container">
+            <p>&copy; 2024 My Bootstrap Website. Built with Bootstrap 5.</p>
+        </div>
+    </footer>

@@ -1,5 +1,5 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="de">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,17 +10,19 @@
 </head>
 <body>
   <div class="container">
-    <nav>
-      <div class="logo">
-        <div class="mark">A</div>
-        <span>Alex Html Traum</span>
-      </div>
-      <div class="nav-links">
-        <a href="https://github.com/evictedI">Projekte</a>
-        <a href="ubermich.html">Über mich</a>
-        <a href="#contact" class="btn-solid">Kontakt</a>
-      </div>
-    </nav>
+    <header>
+      <nav>
+        <div class="logo">
+          <div class="mark">A</div>
+          <span>Alex Html Traum</span>
+        </div>
+        <div class="nav-links">
+          <a href="https://github.com/evictedI">Projekte</a>
+          <a href="ubermich.html">Über mich</a>
+          <a href="#contact" class="btn-solid">Kontakt</a>
+        </div>
+      </nav>
+    </header>
 
     <main class="hero">
       <section class="hero-left">
@@ -55,7 +57,7 @@
         <div style="display:flex;gap:0.9rem;align-items:center">
           <div class="avatar">ALEX</div>
           <div>
-            <h3>Willkommen</h3>
+          <h2>Willkommen</h2>
           </div>
         </div>
 
@@ -78,18 +80,20 @@
     if (yearElem) {
       yearElem.textContent = new Date().getFullYear();
     }
-    document.querySelectorAll('a[href^="#"]').forEach(a=>{
-      if (a.getAttribute('href') === '#') return;
-      a.addEventListener('click', e=>{
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      const href = a.getAttribute('href');
+      if (href === '#') return;
+      a.addEventListener('click', e => {
         e.preventDefault();
+        const id = href.substring(1);
         if (!id) {
-          window.scrollTo({top:0, behavior:'smooth'});
+          window.scrollTo({top: 0, behavior: 'smooth'});
           return;
         }
         const el = document.getElementById(id);
-        if(el) el.scrollIntoView({behavior:'smooth', block:'start'});
-      })
-    })
+        if (el) el.scrollIntoView({behavior: 'smooth', block: 'start'});
+      });
+    });
   </script>
 </body>
 </html>
