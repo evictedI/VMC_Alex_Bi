@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Katzenfakten – Alexander Biegel</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <!-- Navigation: verlinkt beide Seiten -->
+        <nav class="nav">
+            <a href="index.html" class="aktiv">🐱 Katzenfakten</a>
+            <a href="ubermich.html">👤 Über mich</a>
+        </nav>
+
+        <header class="hero">
+            <span class="pfote">🐾</span>
+            <h1>Katzen<span class="akzent">fakten</span></h1>
+            <p class="untertitel">
+                Wissenswertes über Katzen – frisch von der API geladen 🐱
+            </p>
+        </header>
+
+        <div class="button-leiste">
+            <button id="btn-zufall" class="btn-primaer">
+                🎲 Neuer Katzen-Fakt
+            </button>
+            <button id="btn-sammeln" class="btn-sekundaer">
+                📚 5 Fakten sammeln
+            </button>
+            <button id="btn-leeren" class="btn-sekundaer">
+                🗑️ Liste leeren
+            </button>
+        </div>
+
+        <main class="container">
+            <!-- Einzel-Fakt-Karte: wird beim Laden (Fakt des Tages) und per Button befüllt -->
+            <section class="haupt-fakt">
+                <p class="label" id="haupt-label">Fakt des Tages</p>
+                <p class="fakt-text" id="haupt-text">Lade …</p>
+                <p class="meta" id="haupt-meta"></p>
+            </section>
+            <p class="status" id="status"></p>
+
+            <!-- Liste der gesammelten Fakten -->
+            <div class="listen-kopf">
+                <h2>Gesammelte Fakten</h2>
+                <span class="zaehler" id="zaehler">0 Favoriten ♥</span>
+            </div>
+            <div id="fakten-liste">
+                <p class="leer-hinweis">
+                    Noch keine Fakten gesammelt. Klick auf „5 Fakten sammeln".
+                </p>
+            </div>
+        </main>
+
+        <footer>&copy; 2026 Alexander Biegel · Daten von catfact.ninja</footer>
+
+        <script src="script.js"></script>
+    </body>
+</html>
