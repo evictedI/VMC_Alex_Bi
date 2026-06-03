@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>Text Effekte</title>
+
+<style>
+  #text {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .blink {
+    animation: blinken 0.5s infinite;
+  }
+
+  @keyframes blinken {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+</style>
+</head>
+
+<body>
+
+<p id="text">Das ist ein Beispieltext</p>
+
+<button onclick="farbeAendern()">Farbe ändern</button>
+<button onclick="blinken()">Blinken starten/stoppen</button>
+
+<script>
+function farbeAendern() {
+  const text = document.getElementById("text");
+  
+  // zufällige Farbe
+  const farben = ["red", "blue", "green", "purple", "orange"];
+  const zufall = farben[Math.floor(Math.random() * farben.length)];
+  
+  text.style.color = zufall;
+}
+
+function blinken() {
+  const text = document.getElementById("text");
+  text.classList.toggle("blink");
+}
+</script>
+
+</body>
+</html>

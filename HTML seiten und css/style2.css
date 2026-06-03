@@ -1,0 +1,4 @@
+body>div{
+    gap: 1rem;
+    display: flex;
+}
